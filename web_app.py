@@ -20,7 +20,7 @@ for index, todo in enumerate(todos):
         todos.pop(index)
         functions.write_todos(todos)
         del st.session_state[f"todo_{index}"]
-        st.rerun()
+        st.experimental_rerun()
 
 st.text_input(label='', placeholder='Add a new Todo...',
               on_change=add_todo, key='new_todo')
